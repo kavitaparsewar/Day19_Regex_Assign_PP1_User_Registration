@@ -10,6 +10,10 @@ namespace PP1_User_Registration
         public static string validation = "^[a-zA-Z]{3,}[.][a-zA-Z]{3,}[@][a-zA-Z]{2}[.][a-zA-Z]{2}$";
         public bool validemail(string name)
         {
+            if (name == null)
+            {
+                throw new CustomException(CustomException.ExceptionsType.INVALID_MESSAGE, "Invalid FirstName");
+            }
             return Regex.IsMatch(name, validation);
         }
     
