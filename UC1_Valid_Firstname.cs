@@ -8,7 +8,7 @@ namespace PP1_User_Registration
     class UC1_Valid_Firstname
     {
         public static string validationfirstname = "^[A-Z]{1}[a-z]{2,}$";
-       
+
         public bool validfname(string name)
         {
             if (name == null)
@@ -17,6 +17,6 @@ namespace PP1_User_Registration
             }
             return Regex.IsMatch(name, validationfirstname);
         }
-    
+
     }
- }
+}
